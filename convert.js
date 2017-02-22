@@ -23,7 +23,7 @@ function convert() {
 	req.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
 	req.onreadystatechange = function () {
 		if (req.readyState == 4 && req.status == 200) {
-			document.getElementById("output").innerHTML = req.responseText;
+			document.getElementById("output").value = req.responseText;
 		}
 	}
 	req.send(data);
@@ -31,4 +31,5 @@ function convert() {
 
 function clear_input() {
 	document.getElementById("input").value = "";
+	document.getElementById("output").value = "";
 }
