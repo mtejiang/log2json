@@ -1,12 +1,18 @@
 <html>
 <head>
-<title>Log to JSON</title>
-<script src="convert.js"></script> 
+	<title>Log to JSON</title>
+	<link rel="stylesheet" type="text/css" href="main.css">
+	<script src="convert.js"></script> 
 </head>
 
 <body>
-<textarea rows="20" cols="50" id="input"></textarea>
-<button id="convert_btn" onclick="convert();">转换</button>
-<textarea rows="20" cols="50" id="output"></textarea>
+	<textarea id="input"></textarea>
+	<div class="centerPart">
+		<div>
+			<button id="convert_btn" onclick="convert();">转换</button>
+			<button id="clear_btn" onclick="clear_input();">清除</button>
+		</div>
+	</div>
+	<textarea id="output"></textarea>
 </body>
 </html>

@@ -1,0 +1,20 @@
+#input{width:60%;height:100%;}
+#output{width:30%;height:100%;}
+.centerPart{
+	display:inline-block;
+	width:8%;
+	height:100%;
+	position:relative;
+	}
+.centerPart div{
+	position:absolute;
+	top:50%;
+	left:50%;
+	margin-top:-40px;
+	margin-left:-25px;
+}
+.centerPart div button {
+	width:50px;
+	height:30px;
+	margin-bottom:20px;
+}
