@@ -1,9 +1,9 @@
-#input{width:60%;height:100%;}
-#output{width:30%;height:100%;}
+#input{width:60%;height:99%;}
+#output{width:30%;height:99%;}
 .centerPart{
 	display:inline-block;
-	width:8%;
-	height:100%;
+	width:9%;
+	height:99%;
 	position:relative;
 	}
 .centerPart div{
