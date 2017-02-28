@@ -1,9 +1,14 @@
-#input{width:60%;height:99%;}
-#output{width:30%;height:99%;}
+@import url("normalize.css");
+
+html, body {
+	height: 98%;
+}
+#input{width:60%;height:100%;}
+#output{width:30%;height:100%;}
 .centerPart{
 	display:inline-block;
-	width:9%;
-	height:99%;
+	width:8%;
+	height:100%;
 	position:relative;
 	}
 .centerPart div{
@@ -11,10 +16,10 @@
 	top:50%;
 	left:50%;
 	margin-top:-40px;
-	margin-left:-25px;
+	margin-left:-30px;
 }
 .centerPart div button {
-	width:50px;
+	width:60px;
 	height:30px;
 	margin-bottom:20px;
 }
