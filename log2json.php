@@ -114,7 +114,7 @@ class FixedTypeLengthLogConverter extends LogConverter
 
 	protected function readType() {
 		$type = parent::readType();
-		$this->readChar(":");
+		$this->readChar(':');
 		return $type;
 	}
 
@@ -315,7 +315,9 @@ class VariableTypeLengthLogConverter extends LogConverter
 		$count = 0;
 		$pos = strpos($type, '(');
 		if ($pos === false) {
-			$this->readChar(':');
+			if ($type !== 'NUL') {
+				$this->readChar(':');
+			}
 		} else {
 			$count = substr($type, $pos+1, strlen($type)-$pos-2);
 			$type = substr($type, 0, $pos);
@@ -347,7 +349,7 @@ class VariableTypeLengthLogConverter extends LogConverter
 	}
 
 	protected function readInteger() {
-		while (is_numeric($this->_log[$this->_idx])) {
+		while ($this->_log[$this->_idx] === '-' || is_numeric($this->_log[$this->_idx])) {
 			$this->_result .= $this->_log[$this->_idx];
 			$this->_idx++;
 		}

@@ -100,4 +100,11 @@ Str]:[END],n12:[Bool]:[True],n13:[Str]:7bit[END],n14:[Str]:[END],n2:[Int]:0,n3:[
 EOF;
 		$this->assertNotEquals($this->parseVariable($input), null);
 	}
+
+	public function testVariable2() {
+		$input = <<<'EOF'
+T:1006290688(16:05:55)[app.ud-M035a3AAAN3ds1jz+EkA:Info] corpease/worldvalue.cn/value - NormalDelivery, [Struct(15)]{antispam_opt:[Int]:-1,antispam_option:[Str]:[END],antivirus_option:[Str]:01DDC10[END],aveng:[Str]:[END],fdr:[Int]:1,in_safe:[Bool]:[False],in_sent:[Bool]:[False],junk_lvl:[Int]:0,lang:[Int]:0,lsms:[Int]:2,lsmsg:[Str]:1tbiAgOL+FTQmTbjvQAAmH[END],mbox:[Str]:1_value###_70_1000cphf[END],miscattr:[Struct(7)]{androidpush:[NUL],applepush:[NUL],maillist_errorto:[NUL],maillist_filter:[NUL],true_name:[WStr]:(5 chars)value,weixinaddr:[NUL],yxaddr:[NUL]},msginfo:[Struct(1)]{rcpttype:[Int]:2},ret:[Int]:0}
+EOF;
+		$this->assertNotEquals($this->parseVariable($input), null);
+	}
 }
