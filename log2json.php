@@ -100,7 +100,7 @@ class FixedTypeLengthLogConverter extends LogConverter
 		$this->readChar("}");
 	}
 	private function readKey() {
-		$key = $this->readUntil("=");
+		$key = $this->readUntil("={");
 		$this->_result .= '"'.$key.'":';
 	}
 
